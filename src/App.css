@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+body {
+  border: 0px;
+  padding: 0px;
+  /* padding-top: 20px; */
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.member-hub-main-container {
+  height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  padding-top: 30px;
+  /* justify-content: center; */
   align-items: center;
+  background-image: url("https://tse4.mm.bing.net/th?id=OIP.Zi88haZnUPSx7LfwcY5iuAHaEo&pid=Api&P=0&h=180");
+
+  overflow-y: scroll;
+}
+/* .nav-container{
+
+} */
+.member-ul-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  /* For small and medium devices */
+  .member-ul-container {
+    flex-direction: column;
+  }
+}
+
+.member-li-container {
+  margin: 20px;
+  height: 40px;
+  width: 130px;
+  background-color: rgb(236, 235, 234);
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.anchor-link {
+  text-decoration: none;
+  font-size: 15px;
+  font-family: "Roboto";
+  font-weight: 300;
+  color: #000000;
 }

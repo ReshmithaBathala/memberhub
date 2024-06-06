@@ -1,0 +1,68 @@
+.all-certificates-container {
+  flex-grow: 2;
+  flex-shrink: 1;
+}
+.certificates-list-heading {
+  font-size: 20px;
+  font-family: "Roboto";
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+.certificates-ul-container {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.certificates-li-type {
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+  justify-content: center;
+  padding: 10px;
+}
+.view-certificate-1 {
+  height: 40px;
+  width: 130px;
+  outline: none;
+  border: 0px solid transparent;
+  border-radius: 6px;
+  background-color: #000000;
+  text-decoration: transparent;
+  font-size: 14px;
+  font-family: "Roboto";
+  color: #ffffff;
+  text-align: center;
+  padding-top: 15px;
+  font-weight: 100;
+  margin-top: 20px;
+}
+.loading {
+  font-size: 20px;
+  font-family: "Roboto";
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+.loading-spinner {
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: auto; /* Center the spinner */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

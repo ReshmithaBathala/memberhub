@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AddMember from "./components/AddMember/AddMember";
+import ViewMembers from "./components/ViewMembers/ViewMembers";
+import GenerateCertificate from "./components/GenerateCertificate/GenerateCertificate";
+import MemberCertificates from "./components/MemberCertificate/MemberCertificates";
+// import SendReminders from "./components/SendReminders";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="member-hub-main-container">
+        <nav className="nav-container">
+          <ul className="member-ul-container">
+            <li className="member-li-container">
+              <a href="/add-member" className="anchor-link">
+                Add Member
+              </a>
+            </li>
+            <li className="member-li-container">
+              <a href="/view-members" className="anchor-link">
+                View Members
+              </a>
+            </li>
+            {/* <li className="member-li-container">
+              <a href="/send-reminders" className="anchor-link">
+                Send Remainders
+              </a>
+            </li> */}
+          </ul>
+        </nav>
+        <Routes>
+          <Route path="/add-member" element={<AddMember />} />
+          <Route path="/view-members" element={<ViewMembers />} />
+          <Route
+            path="/generate-certificate/:memberId"
+            element={<GenerateCertificate />}
+          />
+          <Route
+            path="/member-certificates/:memberId"
+            element={<MemberCertificates />}
+          />
+          {/* <Route
+            path="/view-certificate/:certificateId"
+            component={ViewCertificate}
+          /> */}
+          {/* <Route path="/send-reminders" element={<SendReminders />} /> */}
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
