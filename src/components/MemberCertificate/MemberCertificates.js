@@ -38,7 +38,7 @@ const MemberCertificates = () => {
               Achievement: {certificate.achievement} <br />
               <br /> Date: {certificate.date}
               <a
-                href={`https://backendmemberhubdeploylink.onrender.com/view-certificate/${certificate.id}`}
+                href={`https://backendmemberhub-1.onrender.com/view-certificate/${certificate.id}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="view-certificate-1"

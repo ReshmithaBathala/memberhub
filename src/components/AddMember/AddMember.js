@@ -77,7 +77,7 @@ const AddMember = () => {
               Select status
             </option>
             <option value="active">Active</option>
-            <option value="inactive">Inactive</option>
+            {/* <option value="inactive">Inactive</option> */}
           </select>
         </div>
         <div className="input-container">
